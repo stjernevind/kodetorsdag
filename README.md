@@ -89,5 +89,22 @@ Lag en konstruktør til Weapon.java slik at følgende kode kjøres fra main-funk
 Weapon stick = new Weapon(1, "wooden stick");
 ```
 
+Nå har du gitt objektet stick noen egenskaper. Men siden variablene er private kan du fortsatt ikke ta de i bruk utenfor klassen. Og det trenger du jo hvis du skal kjøre spillet fra Game.java. Løsningen på dette er å lage det vi kaller for getters 
+
+```java
+public String getType(){
+    return this.type;
+}
+```
+
+Nå kan du kjøre følgende kode fra Game.java
+
+```java
+System.out.println(one.name + " found a" + stick.getType());
+```
+
+### Oppgave
+Lag getters for type og damage i klassen Weapon.java. Test at det funker ved å bruke System.out.println til å skrive verdiene til terminal. Husk å kompilere koden først! 
+
 ### Oppgave
 Lag beskrivende kommentarer på koden din. Om du får det til, lag et GitHub-repo som heter kodetorsdag og push koden dit. 
